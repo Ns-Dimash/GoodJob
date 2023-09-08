@@ -11,7 +11,10 @@
 		01B5ADB02AAA076A00CA444A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B5ADAF2AAA076A00CA444A /* ContentView.swift */; };
 		01B5ADB22AAA076B00CA444A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B5ADB12AAA076B00CA444A /* Assets.xcassets */; };
 		01B5ADB52AAA076B00CA444A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B5ADB42AAA076B00CA444A /* Preview Assets.xcassets */; };
-		4FF417442AAA086A00B93B49 /* IntentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF417432AAA086A00B93B49 /* IntentView.swift */; };
+		01BE5FFB2AAB1A8E001A8BBC /* Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE5FFA2AAB1A8E001A8BBC /* Start.swift */; };
+		01BE5FFD2AAB1E3A001A8BBC /* FirstPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE5FFC2AAB1E3A001A8BBC /* FirstPage.swift */; };
+		01BE60002AAB31A1001A8BBC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE5FFF2AAB31A1001A8BBC /* LoginView.swift */; };
+		01BE60022AAB33C6001A8BBC /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01BE60012AAB33C6001A8BBC /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +23,10 @@
 		01B5ADAF2AAA076A00CA444A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		01B5ADB12AAA076B00CA444A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01B5ADB42AAA076B00CA444A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4FF417432AAA086A00B93B49 /* IntentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentView.swift; sourceTree = "<group>"; };
+		01BE5FFA2AAB1A8E001A8BBC /* Start.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start.swift; sourceTree = "<group>"; };
+		01BE5FFC2AAB1E3A001A8BBC /* FirstPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPage.swift; sourceTree = "<group>"; };
+		01BE5FFF2AAB31A1001A8BBC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		01BE60012AAB33C6001A8BBC /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,11 +59,10 @@
 		01B5ADAC2AAA076A00CA444A /* GoodJob */ = {
 			isa = PBXGroup;
 			children = (
-				01B5ADAD2AAA076A00CA444A /* GoodJobApp.swift */,
-				01B5ADAF2AAA076A00CA444A /* ContentView.swift */,
-				4FF417432AAA086A00B93B49 /* IntentView.swift */,
-				01B5ADB12AAA076B00CA444A /* Assets.xcassets */,
-				01B5ADB32AAA076B00CA444A /* Preview Content */,
+				01BE5FF92AAB1A6F001A8BBC /* Components */,
+				01BE5FF12AAB1771001A8BBC /* App */,
+				01BE5FF22AAB177A001A8BBC /* View */,
+				01BE60032AAB3C1F001A8BBC /* Others */,
 			);
 			path = GoodJob;
 			sourceTree = "<group>";
@@ -67,7 +72,68 @@
 			children = (
 				01B5ADB42AAA076B00CA444A /* Preview Assets.xcassets */,
 			);
-			path = "Preview Content";
+			name = "Preview Content";
+			path = "../../Preview Content";
+			sourceTree = "<group>";
+		};
+		01BE5FF12AAB1771001A8BBC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				01B5ADAD2AAA076A00CA444A /* GoodJobApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		01BE5FF22AAB177A001A8BBC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01BE5FF82AAB1A1B001A8BBC /* Onboarding */,
+				01BE5FFE2AAB3160001A8BBC /* Registration */,
+				01BE5FF72AAB1A12001A8BBC /* Root */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		01BE5FF72AAB1A12001A8BBC /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				01B5ADAF2AAA076A00CA444A /* ContentView.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		01BE5FF82AAB1A1B001A8BBC /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				01BE5FFC2AAB1E3A001A8BBC /* FirstPage.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		01BE5FF92AAB1A6F001A8BBC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				01BE5FFA2AAB1A8E001A8BBC /* Start.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		01BE5FFE2AAB3160001A8BBC /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				01BE5FFF2AAB31A1001A8BBC /* LoginView.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		01BE60032AAB3C1F001A8BBC /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				01B5ADB32AAA076B00CA444A /* Preview Content */,
+				01BE60012AAB33C6001A8BBC /* Launch Screen.storyboard */,
+				01B5ADB12AAA076B00CA444A /* Assets.xcassets */,
+			);
+			path = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01BE60022AAB33C6001A8BBC /* Launch Screen.storyboard in Resources */,
 				01B5ADB52AAA076B00CA444A /* Preview Assets.xcassets in Resources */,
 				01B5ADB22AAA076B00CA444A /* Assets.xcassets in Resources */,
 			);
@@ -141,8 +208,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				01B5ADB02AAA076A00CA444A /* ContentView.swift in Sources */,
-				4FF417442AAA086A00B93B49 /* IntentView.swift in Sources */,
+				01BE5FFB2AAB1A8E001A8BBC /* Start.swift in Sources */,
 				01B5ADAE2AAA076A00CA444A /* GoodJobApp.swift in Sources */,
+				01BE60002AAB31A1001A8BBC /* LoginView.swift in Sources */,
+				01BE5FFD2AAB1E3A001A8BBC /* FirstPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,9 +343,10 @@
 				DEVELOPMENT_TEAM = 9D422DH2LV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GoodJob/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -303,9 +373,10 @@
 				DEVELOPMENT_TEAM = 9D422DH2LV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GoodJob/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
