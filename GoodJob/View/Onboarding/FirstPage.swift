@@ -1,42 +1,4 @@
-//
-//  FirstPage.swift
-//  GoodJob
-//
-//  Created by Dimash Nsanbaev on 9/8/23.
-//
 
-//import SwiftUI
-//
-//
-//
-//struct FirstPage: View {
-//    @State private var selectedTab = 0
-//
-//    var body: some View {
-//        NavigationView {
-//            VStack {
-//                TabView(selection: $selectedTab) {
-//                    Start(centerImage: "First", headerText: "Найти работу", text: "Заполни портфолио и ты тоже будешь работать")                .tag(0)
-//
-//                    Start(centerImage: "Second", headerText: "Подтвердите свой заказ", text: "Огромная сеть работника поможет вам найти комфортную, безопасную и дешевую услугу.")
-//                        .tag(1)
-//
-//                    Start(centerImage: "Third", headerText: "Отслеживайте свою работника", text: "Знайте своего работника заранее и сможете просматривать текущее местоположение в режиме реального времени на карте.")                        .tag(2)
-//                }
-//                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-//
-//                HStack(spacing: 0) {
-//                                    ForEach(0..<3) { index in
-//                                        Rectangle()
-//                                            .frame(width: 30, height: 6)
-//                                            .foregroundColor(index == selectedTab ? Color.blue : Color.gray)
-//                                    }
-//                                }
-//                                .offset(x: CGFloat(selectedTab * 8), y: 4)
-//            }
-//        }
-//    }
-//}
 
 import SwiftUI
 
@@ -86,10 +48,7 @@ struct FirstPage: View {
                 indicator
                 
             }
-//            .onAppear {
-//                // Set the selectedTab to 2 (third page) when the view appears
-//                selectedTab = 2
-//            }
+
         }
     }
     
