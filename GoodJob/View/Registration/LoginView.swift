@@ -96,18 +96,58 @@ struct LoginView: View {
                 .padding(.top,20)
             
             
-            
-            
-            
-            
-            
             if selectedTab == "Регистрировать" {
                 register
-            } else {
-                Text("Это вкладка 'Войти'")
             }
-            
+            if selectedTab == "Войти" {
+                signIn
+            }
             Spacer()
+        }
+    }
+    
+    var signIn: some View {
+        VStack {
+            Text("Войдите под своим номером телефона")
+                .padding()
+                .font(.system(size: 15))
+            VStack(spacing: 16) {
+                iPhoneNumberField("Phone Number", text: $number)
+                    .flagHidden(false)
+                    .flagSelectable(true)
+                    .prefixHidden(false)
+                   
+                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke(Color.gray, lineWidth: 0.5)
+                    )
+                TextField("пароль", text: $email)
+                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                    .background(Color.white)
+                    .cornerRadius(5)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke(Color.gray, lineWidth: 0.5)
+                    )
+                Spacer()
+                NavigationLink {
+                   EmptyView()
+                } label: {
+                    ZStack{
+                        Color(red: 135/255, green: 116/255, blue: 1)
+                            .frame(width: 320,height: 45)
+                            .cornerRadius(10)
+                        Text("Войти")
+                            .foregroundColor(.white)
+                            
+                    }
+                    .padding(.bottom,40)
+
+                    
+                }
+            }
+            .padding()
         }
     }
     
