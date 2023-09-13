@@ -6,14 +6,21 @@
 //
 
 import SwiftUI
+import iPhoneNumberField
+
 
 struct LoginView: View {
     @State private var selectedTab = "Регистрировать"
     @State private var dotOffset: CGFloat = 0
+    @State var number = ""
+    @State var email = ""
+    
     
     
     var body: some View {
         ZStack{
+            Color(.gray)
+                .opacity(0.1)
             VStack{
                 ZStack{
                     
@@ -88,22 +95,73 @@ struct LoginView: View {
             Divider()
                 .padding(.top,20)
             
-           
             
             
             
-            Spacer()
+            
             
             
             if selectedTab == "Регистрировать" {
-                Text("Это вкладка 'Регистрировать'")
+                register
             } else {
                 Text("Это вкладка 'Войти'")
             }
+            
+            Spacer()
         }
     }
     
+    var register:some View{
+        
+        VStack(spacing: 30){
+            TextField("name@example.com", text: $email)
+                .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                .background(Color.white)
+                .cornerRadius(5)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 5)
+                        .stroke(Color.gray, lineWidth: 0.5)
+                )
+            
+            iPhoneNumberField("Phone Number", text: $number)
+                .flagHidden(false)
+                .flagSelectable(true)
+                .prefixHidden(false)
+               
+                .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 5)
+                        .stroke(Color.gray, lineWidth: 0.5)
+                )
+                
+            
+            NavigationLink {
+               EmptyView()
+                    .navigationBarBackButtonHidden(true)
+            } label: {
+                ZStack{
+                    Color(red: 135/255, green: 116/255, blue: 1)
+                        .frame(width: 190,height: 45)
+                        .cornerRadius(10)
+                    Text("НАЧАТЬ")
+                        .foregroundColor(.white)
+                        
+                }
+                .padding(.bottom,40)
+
+                
+            }
+        }
+        .padding()
+        
+        
+    }
+    
 }
+
+
+
+
 
 
 struct TabButtonStyle: ButtonStyle {
