@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		01AD4F302AB18C6900E282EC /* iPhoneNumberField in Frameworks */ = {isa = PBXBuildFile; productRef = 01AD4F2F2AB18C6900E282EC /* iPhoneNumberField */; };
+		01AD4F322AB1A3A400E282EC /* VerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD4F312AB1A3A300E282EC /* VerificationView.swift */; };
 		01B5ADAE2AAA076A00CA444A /* GoodJobApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B5ADAD2AAA076A00CA444A /* GoodJobApp.swift */; };
 		01B5ADB02AAA076A00CA444A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B5ADAF2AAA076A00CA444A /* ContentView.swift */; };
 		01B5ADB22AAA076B00CA444A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B5ADB12AAA076B00CA444A /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01AD4F312AB1A3A300E282EC /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
 		01B5ADAA2AAA076A00CA444A /* GoodJob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodJob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B5ADAD2AAA076A00CA444A /* GoodJobApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodJobApp.swift; sourceTree = "<group>"; };
 		01B5ADAF2AAA076A00CA444A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				01BE5FFF2AAB31A1001A8BBC /* LoginView.swift */,
+				01AD4F312AB1A3A300E282EC /* VerificationView.swift */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				01B5ADB02AAA076A00CA444A /* ContentView.swift in Sources */,
 				01BE5FFB2AAB1A8E001A8BBC /* Start.swift in Sources */,
 				01B5ADAE2AAA076A00CA444A /* GoodJobApp.swift in Sources */,
+				01AD4F322AB1A3A400E282EC /* VerificationView.swift in Sources */,
 				01BE60002AAB31A1001A8BBC /* LoginView.swift in Sources */,
 				01BE5FFD2AAB1E3A001A8BBC /* FirstPage.swift in Sources */,
 			);

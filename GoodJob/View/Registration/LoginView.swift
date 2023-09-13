@@ -137,13 +137,12 @@ struct LoginView: View {
             
             NavigationLink {
                EmptyView()
-                    .navigationBarBackButtonHidden(true)
             } label: {
                 ZStack{
                     Color(red: 135/255, green: 116/255, blue: 1)
-                        .frame(width: 190,height: 45)
+                        .frame(width: 320,height: 45)
                         .cornerRadius(10)
-                    Text("НАЧАТЬ")
+                    Text("Регестрировать")
                         .foregroundColor(.white)
                         
                 }
