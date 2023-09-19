@@ -176,7 +176,8 @@ struct LoginView: View {
                 
             
             NavigationLink {
-               EmptyView()
+               VerificationView()
+                    .navigationBarBackButtonHidden()
             } label: {
                 ZStack{
                     Color(red: 135/255, green: 116/255, blue: 1)

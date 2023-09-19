@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0192861B2ABA40A200E2DBBD /* OtpView-SwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0192861A2ABA40A200E2DBBD /* OtpView-SwiftUI */; };
 		01AD4F302AB18C6900E282EC /* iPhoneNumberField in Frameworks */ = {isa = PBXBuildFile; productRef = 01AD4F2F2AB18C6900E282EC /* iPhoneNumberField */; };
 		01AD4F322AB1A3A400E282EC /* VerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD4F312AB1A3A300E282EC /* VerificationView.swift */; };
 		01B5ADAE2AAA076A00CA444A /* GoodJobApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B5ADAD2AAA076A00CA444A /* GoodJobApp.swift */; };
@@ -38,6 +39,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01AD4F302AB18C6900E282EC /* iPhoneNumberField in Frameworks */,
+				0192861B2ABA40A200E2DBBD /* OtpView-SwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +161,7 @@
 			name = GoodJob;
 			packageProductDependencies = (
 				01AD4F2F2AB18C6900E282EC /* iPhoneNumberField */,
+				0192861A2ABA40A200E2DBBD /* OtpView-SwiftUI */,
 			);
 			productName = GoodJob;
 			productReference = 01B5ADAA2AAA076A00CA444A /* GoodJob.app */;
@@ -190,6 +193,7 @@
 			mainGroup = 01B5ADA12AAA076A00CA444A;
 			packageReferences = (
 				01AD4F2E2AB18C6900E282EC /* XCRemoteSwiftPackageReference "iPhoneNumberField" */,
+				019286192ABA40A200E2DBBD /* XCRemoteSwiftPackageReference "OtpView-SwiftUI" */,
 			);
 			productRefGroup = 01B5ADAB2AAA076A00CA444A /* Products */;
 			projectDirPath = "";
@@ -430,6 +434,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		019286192ABA40A200E2DBBD /* XCRemoteSwiftPackageReference "OtpView-SwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kenagt/OtpView-SwiftUI.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		01AD4F2E2AB18C6900E282EC /* XCRemoteSwiftPackageReference "iPhoneNumberField" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/MojtabaHs/iPhoneNumberField.git";
@@ -441,6 +453,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0192861A2ABA40A200E2DBBD /* OtpView-SwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 019286192ABA40A200E2DBBD /* XCRemoteSwiftPackageReference "OtpView-SwiftUI" */;
+			productName = "OtpView-SwiftUI";
+		};
 		01AD4F2F2AB18C6900E282EC /* iPhoneNumberField */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 01AD4F2E2AB18C6900E282EC /* XCRemoteSwiftPackageReference "iPhoneNumberField" */;

@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "otpview-swiftui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kenagt/OtpView-SwiftUI.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "48e7cd0eb56a6548652ddc5ad284c509b63de3b2"
+      }
+    },
+    {
       "identity" : "phonenumberkit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/marmelroy/PhoneNumberKit",
