@@ -24,7 +24,7 @@ struct LoginView: View {
             VStack{
                 ZStack{
                     
-                    Color(red: 135/255, green: 116/255, blue: 1)
+                    Color("background")
                         .frame(width:UIScreen.main.bounds.size.width,height: UIScreen.main.bounds.size.height/2)
                     Image("logo")
                         .resizable()
@@ -132,7 +132,7 @@ struct LoginView: View {
                     )
                 Spacer()
                 NavigationLink {
-                   EmptyView()
+                   ProfileView()
                 } label: {
                     ZStack{
                         Color(red: 135/255, green: 116/255, blue: 1)
@@ -176,7 +176,7 @@ struct LoginView: View {
                 
             
             NavigationLink {
-               EmptyView()
+                ProfileView()
             } label: {
                 ZStack{
                     Color(red: 135/255, green: 116/255, blue: 1)
@@ -184,7 +184,6 @@ struct LoginView: View {
                         .cornerRadius(10)
                     Text("Регестрировать")
                         .foregroundColor(.white)
-                        
                 }
                 .padding(.bottom,40)
 
