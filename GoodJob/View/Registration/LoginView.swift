@@ -10,192 +10,104 @@ import iPhoneNumberField
 
 
 struct LoginView: View {
-    @State private var selectedTab = "Регистрировать"
-    @State private var dotOffset: CGFloat = 0
-    @State var number = ""
-    @State var email = ""
-    
-    
     
     var body: some View {
-        ZStack{
-            Color(.gray)
-                .opacity(0.1)
-            VStack{
-                ZStack{
-                    
-                    Color(red: 135/255, green: 116/255, blue: 1)
-                        .frame(width:UIScreen.main.bounds.size.width,height: UIScreen.main.bounds.size.height/2)
-                    Image("logo")
-                        .resizable()
-                        .frame(width: 130, height: 150)
-                        .padding(.bottom,80)
-                    Spacer()
-                    Image("logoCity")
-                        .resizable()
-                        .frame(width: UIScreen.main.bounds.size.width, height: 300)
-                        .padding(.top,148)
-                    
-                }
-                Spacer()
-            }
+        VStack{
             
-            VStack{
-                ZStack{
-                    Color(.white)
-                        .frame(width: 350,height: 400)
-                        .cornerRadius(10)
-                    inView
-                }
-                
-                
-            }
-            
-            .padding(.top,100)
-            .frame(width: 350,height: 400)
-        }
-        .ignoresSafeArea()
+            Text("X")
+                .foregroundColor( Color(red: 0, green: 135/255, blue: 0))
+                .font(.system(size: 250))
         
-    }
-    
-    var inView:some View{
-        VStack {
-            HStack(spacing: 50) {
-                Button("Регистрировать") {
-                    withAnimation {
-                        selectedTab = "Регистрировать"
-                        dotOffset = 0
-                    }
-                }
-                .buttonStyle(TabButtonStyle(isSelected: selectedTab == "Регистрировать"))
-                
-                Button("Войти") {
-                    withAnimation {
-                        selectedTab = "Войти"
-                        dotOffset = 1
-                    }
-                }
-                .buttonStyle(TabButtonStyle(isSelected: selectedTab == "Войти"))
-            }
-            .padding(.top,40)
-            .animation(.easeInOut, value: 0.2)
-            
-            // Add the dot under the selected button
-            GeometryReader { geo in
-                RoundedRectangle(cornerRadius: 6)
-                    .frame(width: geo.size.width / 5, height: 7)
-                    .foregroundColor(Color(red: 135/255, green: 116/255, blue: 225/255))
-                    .offset(x: geo.size.width / 1.5 * dotOffset)
-                    .animation(.easeInOut, value: 0.2)
-            }
-            .padding(.leading,80)
-            .frame(height: 4)
-            
-            
-            Divider()
-                .padding(.top,20)
-            
-            
-            if selectedTab == "Регистрировать" {
-                register
-            }
-            if selectedTab == "Войти" {
-                signIn
-            }
-            Spacer()
-        }
-    }
-    
-    var signIn: some View {
-        VStack {
-            Text("Войдите под своим номером телефона")
-                .padding()
-                .font(.system(size: 15))
-            VStack(spacing: 16) {
-                iPhoneNumberField("Phone Number", text: $number)
-                    .flagHidden(false)
-                    .flagSelectable(true)
-                    .prefixHidden(false)
-                   
-                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 5)
-                            .stroke(Color.gray, lineWidth: 0.5)
-                    )
-                TextField("пароль", text: $email)
-                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-                    .background(Color.white)
-                    .cornerRadius(5)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 5)
-                            .stroke(Color.gray, lineWidth: 0.5)
-                    )
-                Spacer()
+            VStack(spacing: -20){
                 NavigationLink {
-                   EmptyView()
+                    OnlyLoginView()
+                    
+                        .navigationBarBackButtonHidden()
                 } label: {
                     ZStack{
-                        Color(red: 135/255, green: 116/255, blue: 1)
-                            .frame(width: 320,height: 45)
-                            .cornerRadius(10)
-                        Text("Войти")
+//                        Color(red: 30/255, green: 35/255, blue: 44/255)
+                        Color(red: 0, green: 135/255, blue: 0)
+                            .frame(width: 330,height: 56)
+                            .cornerRadius(8)
+                        Text("Логин")
                             .foregroundColor(.white)
-                            
                     }
-                    .padding(.bottom,40)
-
+                    .padding()
+                    
                     
                 }
-            }
-            .padding()
-        }
-    }
-    
-    var register:some View{
-        
-        VStack(spacing: 30){
-            TextField("name@example.com", text: $email)
-                .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-                .background(Color.white)
-                .cornerRadius(5)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 5)
-                        .stroke(Color.gray, lineWidth: 0.5)
-                )
-            
-            iPhoneNumberField("Phone Number", text: $number)
-                .flagHidden(false)
-                .flagSelectable(true)
-                .prefixHidden(false)
-               
-                .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 5)
-                        .stroke(Color.gray, lineWidth: 0.5)
-                )
                 
-            
-            NavigationLink {
-               VerificationView()
-                    .navigationBarBackButtonHidden()
-            } label: {
-                ZStack{
-                    Color(red: 135/255, green: 116/255, blue: 1)
-                        .frame(width: 320,height: 45)
-                        .cornerRadius(10)
-                    Text("Регестрировать")
-                        .foregroundColor(.white)
-                        
+                NavigationLink {
+                    VerificationView()
+                        .navigationBarBackButtonHidden()
+                } label: {
+                    ZStack{
+                        Text("Регистрация")
+                            .foregroundColor( Color(red: 0, green: 135/255, blue: 0))
+                            .padding(.horizontal,115)
+                            .padding(.vertical)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .stroke(Color(red: 0, green: 135/255, blue: 0), lineWidth: 2)
+                            )
+                    }
+                    .padding()
+                    
+                    
                 }
-                .padding(.bottom,40)
-
                 
             }
         }
-        .padding()
         
         
     }
+    
+    
+    
+    //    var register:some View{
+    //
+    //        VStack(spacing: 30){
+    //            TextField("name@example.com", text: $email)
+    //                .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+    //                .background(Color.white)
+    //                .cornerRadius(5)
+    //                .overlay(
+    //                    RoundedRectangle(cornerRadius: 5)
+    //                        .stroke(Color.gray, lineWidth: 0.5)
+    //                )
+    //
+    //            iPhoneNumberField("Phone Number", text: $number)
+    //                .flagHidden(false)
+    //                .flagSelectable(true)
+    //                .prefixHidden(false)
+    //
+    //                .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+    //                .overlay(
+    //                    RoundedRectangle(cornerRadius: 5)
+    //                        .stroke(Color.gray, lineWidth: 0.5)
+    //                )
+    //
+    //
+    //            NavigationLink {
+    //               VerificationView()
+    //                    .navigationBarBackButtonHidden()
+    //            } label: {
+    //                ZStack{
+    //                    Color(red: 135/255, green: 116/255, blue: 1)
+    //                        .frame(width: 320,height: 45)
+    //                        .cornerRadius(10)
+    //                    Text("Регестрировать")
+    //                        .foregroundColor(.white)
+    //                }
+    //                .padding(.bottom,40)
+    //
+    //
+    //            }
+    //        }
+    //        .padding()
+    //
+    //
+    //    }
     
 }
 
@@ -204,16 +116,6 @@ struct LoginView: View {
 
 
 
-struct TabButtonStyle: ButtonStyle {
-    var isSelected: Bool
-    
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .foregroundColor(isSelected ? .black : Color(red: 135/255, green: 116/255, blue: 225/255).opacity(0.53))
-            .fontWeight(.bold)
-            .font(.system(size: 22))
-    }
-}
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {

@@ -40,6 +40,6 @@ struct Start: View {
 
 struct Start_Previews: PreviewProvider {
     static var previews: some View {
-        Start(centerImage: "First", headerText: "Найти работу", text: "Заполни портфолио и ты тоже будешь работать")
+        Start(centerImage: "xxx", headerText: "Найти работу", text: "Заполни портфолио и ты тоже будешь работать")
     }
 }
